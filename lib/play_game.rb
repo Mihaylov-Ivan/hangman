@@ -13,7 +13,7 @@ class PlayGame
     def initialize(lives, word, word_guess, letters_guessed)
         @lives = lives
         @word = word
-        @word_guess = word_guess
+        @word_guess = word_guess.split(" ")
         @letters_guessed = letters_guessed
     end
 
@@ -45,9 +45,6 @@ class PlayGame
         display_lives(lives) 
         display_you_lose )
     end
-
-    # ==============PRIATE==============
-    private
 
     def get_guess
         guess = gets.chomp.to_s

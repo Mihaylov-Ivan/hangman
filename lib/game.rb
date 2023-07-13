@@ -64,7 +64,7 @@ class Game
         game_to_load = get_saved_game(saved_games)
         return if game_to_load == "*exit*"
         data = YAML.load(File.read("../saved_games/#{game_to_load}.yaml"))
-        loaded_game = PlayGame.new(data[0], data[1], data[2], data[3])
+        loaded_game = PlayGame.new(data[0], data[1], data[2].join(" "), data[3])
         loaded_game.play_game
     end
 
