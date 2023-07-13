@@ -1,6 +1,3 @@
-require 'pry-byebug'
-# binding.pry
-
 require_relative "./game.rb"
 
 def play
